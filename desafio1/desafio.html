@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio1</title>
+    <link rel="stylesheet" href="desafio.css">
+</head>
+<body>
+    <h1> Alura Fone </h1>
+    <section class="teclado">
+        <input type="button" value="1" class="tecla">
+        <input type="button" value="2" class="tecla">
+        <input type="button" value="3" class="tecla">
+        <input type="button" value="4" class="tecla">
+        <input type="button" value="5" class="tecla">
+        <input type="button" value="6" class="tecla">
+        <input type="button" value="7" class="tecla">
+        <input type="button" value="8" class="tecla">
+        <input type="button" value="9" class="tecla">
+        <input type="button" value="*" class="tecla">
+        <input type="button" value="0" class="tecla">
+        <input type="button" value="#" class="tecla">
+    </section>
+  <input type="tel" placeholder="Digite seu telefone">
+  
+  <script>
+
+    const teclas = document.querySelectorAll('.tecla')
+
+    for(c = 0; c < teclas.length; c++){
+
+        const rodar = teclas[c]
+
+        rodar.onmousedown = function(){
+            rodar.classList.add('ativa')
+        }
+
+        rodar.onmouseup = function(){
+            rodar.classList.remove('ativa')
+        }
+
+        rodar.onkeydown = function(evento){
+            if (evento.code === "Space" || evento.code === "Enter"){
+                rodar.classList.add('ativa')
+            }
+        
+        rodar.onkeyup = function(){
+            rodar.classList.remove('ativa')
+        }
+        }
+    }
+    
+  </script>
+</body>
+</html>
